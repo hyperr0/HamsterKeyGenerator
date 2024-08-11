@@ -4,11 +4,13 @@ html, body {
     height: 100%;
     display: grid;
     place-items: center;
+    background-color: #1a0002;
+    color: #f2f2f2;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #2c003e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a0002;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +28,10 @@ body {
 
 .container {
     position: relative;
-    background-color: #1e0027;
+    background-color: #3a0004;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(136, 3, 219, 0.713);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
     width: 100%;
     max-width: 500px;
     text-align: center;
@@ -38,24 +40,25 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #e0b3ff;
+    color: #ff9999;
+    font-weight: 700;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #d1a3ff;
+    color: #ffcccc;
 }
 
 select {
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ff4d4d;
     border-radius: 4px;
-    background-color: #4b006e;
-    color: #e0b3ff;
+    background-color: #66000a;
+    color: #ffcccc;
     text-align-last: center;
     font-size: large;
 }
@@ -63,13 +66,13 @@ select {
 select option {
     text-align: left;
     font-size: medium;
+    color: #ffcccc;
 }
-
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #6a0080;
+    padding: 12px 25px;
+    background-color: #b30000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -81,7 +84,8 @@ select option {
 }
 
 .button:hover {
-    background-color: #4a004d;
+    background-color: #800000;
+    transform: scale(1.05);
 }
 
 .progress-container {
@@ -93,7 +97,7 @@ select option {
 .progress-bar {
     width: 0%;
     height: 20px;
-    background-color: #8a00b0;
+    background-color: #e60000;
     border-radius: 4px;
     transition: width 0.3s;
 }
@@ -101,17 +105,15 @@ select option {
 .progress-text {
     margin-left: 10px;
     font-weight: bold;
-    color: #d1a3ff;
+    color: #ffcccc;
 }
 
 .key-container {
     margin-top: 20px;
     max-height: 400px;
     overflow-y: scroll;
-
     scrollbar-width: none;
     -ms-overflow-style: none;
-    
 }
 
 .key-container::-webkit-scrollbar {
@@ -120,7 +122,7 @@ select option {
 }
 
 .key-container h2 {
-    color: #d1a3ff;
+    color: #ffcccc;
 }
 
 .keys-list {
@@ -134,9 +136,9 @@ select option {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    background-color: #2c003e;
+    background-color: #4d0006;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ff4d4d;
     border-radius: 4px;
     word-wrap: break-word;
 }
@@ -145,7 +147,7 @@ select option {
     flex-grow: 1;
     border: none;
     background: transparent;
-    color: #e0b3ff;
+    color: #ff9999;
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -156,7 +158,7 @@ select option {
     text-align: center;
     width: 40px;
     padding: 10px 10px;
-    background-color: #6a0080;
+    background-color: #b30000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -167,7 +169,7 @@ select option {
 
 .key-item button {
     margin-left: 10px;
-    background-color: #6a0080;
+    background-color: #b30000;
     border: none;
     padding: 10px 10px;
     border-radius: 4px;
@@ -178,7 +180,7 @@ select option {
 }
 
 .key-item button:hover {
-    background-color: #4a004d;
+    background-color: #800000;
 }
 
 .hidden {
@@ -187,20 +189,25 @@ select option {
 
 .copy-status {
     margin-top: 10px;
-    color: #d1a3ff;
+    color: #ffcccc;
     font-weight: bold;
 }
 
 .footer-button {
     margin-top: 20px;
-    background-color: #6a0080;
+    background-color: #b30000;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
     text-align: center;
+}
+
+.footer-button:hover {
+    background-color: #800000;
+    transform: scale(1.05);
 }
 
 .language-selector {
@@ -210,11 +217,10 @@ select option {
 }
 
 #languageSelect {
-    background-color: #4b006e;
-    color: #e0b3ff;
-    border: 1px solid #ddd;
+    background-color: #66000a;
+    color: #ffcccc;
+    border: 1px solid #ff4d4d;
     border-radius: 4px;
     padding: 5px;
     font-size: large;
 }
-
