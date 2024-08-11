@@ -1,0 +1,226 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #1a0002;
+    color: #f2f2f2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a0002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    background-color: #3a0004;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff9999;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffcccc;
+}
+
+select {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ff4d4d;
+    border-radius: 4px;
+    background-color: #66000a;
+    color: #ffcccc;
+    text-align-last: center;
+    font-size: large;
+}
+
+select option {
+    text-align: left;
+    font-size: medium;
+    color: #ffcccc;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #800000;
+    transform: scale(1.05);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #e60000;
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+
+.progress-text {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ffcccc;
+}
+
+.key-container {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.key-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.key-container h2 {
+    color: #ffcccc;
+}
+
+.keys-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.key-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #4d0006;
+    padding: 10px;
+    border: 1px solid #ff4d4d;
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+.key-item input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: #ff9999;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.key-number {
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    padding: 10px 10px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.key-item button {
+    margin-left: 10px;
+    background-color: #b30000;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.key-item button:hover {
+    background-color: #800000;
+}
+
+.hidden {
+    display: none;
+}
+
+.copy-status {
+    margin-top: 10px;
+    color: #ffcccc;
+    font-weight: bold;
+}
+
+.footer-button {
+    margin-top: 20px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 25px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-button:hover {
+    background-color: #800000;
+    transform: scale(1.05);
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#languageSelect {
+    background-color: #66000a;
+    color: #ffcccc;
+    border: 1px solid #ff4d4d;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: large;
+}
