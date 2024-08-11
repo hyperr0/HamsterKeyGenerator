@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamster Kombat Key Generator</title>
+    <title>Генератор Ключей Hamster Kombat</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="language-selector">
         <select id="languageSelect">
+            <option value="ru">Русский</option>
             <option value="en">English</option>
-			<option value="ru">Русский</option>
             <option value="sr">Српски</option>
             <option value="be">Беларуская</option>
             <option value="ar">العربية</option>
@@ -31,15 +31,15 @@
     </div>
     <div class="main-container">
         <div class="container">
-            <h1>Hamster Kombat Key Generator</h1>
-            <label for="gameSelect" id="gameSelectLabel">Select the game to generate the keys:</label>
+            <h1>Генератор Ключей Hamster Kombat</h1>
+            <label for="gameSelect" id="gameSelectLabel">Выберите игру для генерации ключа:</label>
             <select id="gameSelect">
                 <option value="MyCloneArmy">My Clone Army</option>
                 <option value="ChainCube2048">Chain Cube 2048</option>
                 <option value="TrainMiner">Train Miner</option>
                 <option value="BikeRide3D">Bike Ride 3D</option>
             </select>
-            <label for="keyCountSelect" id="keyCountLabel">Select the number of keys to generate:</label>
+            <label for="keyCountSelect" id="keyCountLabel">Выберите количество ключей для генерации:</label>
             <select id="keyCountSelect">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -54,17 +54,18 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
-            <button id="startBtn" class="button">Generate Keys</button>
+            <button id="startBtn" class="button">Сгенерировать ключи</button>
             <div id="progressContainer" class="progress-container hidden">
                 <div id="progressBar" class="progress-bar"></div>
                 <span id="progressText" class="progress-text">0%</span>
             </div>
             <div id="keyContainer" class="key-container hidden">
-                <h2 id="generatedKeysTitle">Generated Keys:</h2>
-                <button id="copyAllBtn" class="button hidden">Copy All Keys</button>
+                <h2 id="generatedKeysTitle">Сгенерированные ключи:</h2>
+                <button id="copyAllBtn" class="button hidden">Скопировать все ключи</button>
                 <div id="keysList" class="keys-list"></div>
             </div>
         </div>
+        <button id="creatorChannelBtn" class="button footer-button">Powered by Project PDoSI</button>
     </div>
     <script src="script.js"></script>
 </body>
