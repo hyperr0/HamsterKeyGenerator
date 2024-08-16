@@ -1,0 +1,13 @@
+{
+    "title": "Hamster Kombat ቁልፍ ጄኔሬተር",
+    "generateButton": "ቁልፎችን መፍጠር",
+    "generatedKeysTitle": "የተፈጠሩ ቁልፎች፡-",
+    "footerButton": "Powered By || AC : @xDevAlex || CH : @iAlexMG || Click Here To Follow us",
+    "copyKeyButton": "ቁልፍ ቅዳ",
+    "keyCopied": "ቁልፍ ተቀድቷል።",
+    "copyAllKeysButton": "ሁሉንም ቁልፎች ይቅዱ",
+    "allKeysCopied": "ሁሉም ቁልፎች ተቀድተዋል",
+    "selectKeyCountLabel": "የሚያመነጩትን ቁልፎች ብዛት ይምረጡ፡-",
+    "selectKeyCountLabel_selected": "ለማመንጨት የተመረጡት ቁልፎች ብዛት፡-",
+    "selectGameLabel": "ቁልፎቹን ለማመንጨት ጨዋታውን ይምረጡ፡-"
+}

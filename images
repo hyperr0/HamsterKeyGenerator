@@ -1,0 +1,7 @@
+project-root/
+|-- images/
+|   |-- background.jpg
+|   |-- button-background.jpg
+|-- index.html
+|-- styles.css
+|-- script.js

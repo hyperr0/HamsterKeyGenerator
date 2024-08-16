@@ -1,0 +1,13 @@
+{
+    "title": "مولد کلید همستر کمبت",
+    "generateButton": "تولید کلید",
+    "generatedKeysTitle": "کلیدهای تولید شده:",
+    "footerButton": "پشتیبانی شده توسط || AC : @xDevAlex || CH : @iAlexMG || برای تعقیب ما اینجا کلیک کنید. ر",
+    "copyKeyButton": "کلید کپی",
+    "keyCopied": "کلید کپی شده است",
+    "copyAllKeysButton": "کپی همه کلیدها",
+    "allKeysCopied": "همه کلیدها کپی شده اند",
+    "selectKeyCountLabel": "تعداد کلیدهای تولید را انتخاب کنید:",
+    "selectKeyCountLabel_selected": "تعداد کلیدهای انتخاب شده برای تولید:",
+    "selectGameLabel": "بازی را برای تولید کلید انتخاب کنید:"
+}
