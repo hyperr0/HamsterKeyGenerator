@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     sourceCode.addEventListener('click', () => {
-        window.open('https://t.me/hamster_keycodegame', '_blank');
+        window.open('https://t.me/hamsterplaygroundgamecodes', '_blank');
     });
 
     const generateClientId = () => {
