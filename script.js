@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('creatorBtn').addEventListener('click', () => {
-        window.open('https://t.me/xDevAlex', '_blank');
+        window.open('https://t.me/hyper', '_blank');
 
     });
 });
