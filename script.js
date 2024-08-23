@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
            timing: 20000,
            attempts: 20,
     },
-    9 : {
+        9 : {
             name: 'Mud Racing',
             appToken: '8814a785-97fb-4177-9193-ca4180ff9da8',
             promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
