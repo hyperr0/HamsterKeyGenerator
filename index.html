@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,73 +7,56 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <h1>Hamster Key Generator</h1>
         <div id="gameSelectContainer" class="grid-container">
+            <div class="game-option" data-game="11">
+            <img src="https://cdn.hamsterkombat.io/zoopolis/image.webp" alt="Zoopolis"">
+            <p>Zoopolis</p>
+            </div>
+            <div class="game-option" data-game="10">
+            <img src="https://cdn.hamsterkombat.io/cafe_dash/image.webp" alt="CafeDash"">
+            <p>Cafe Dash</p>
+            </div>
+          <div class="game-option" data-game="9">
+            <img src="https://cdn.hamsterkombat.io/mud_racing/image.webp" alt="Mud Racing">
+            <p>Mud Racing</p>
+            </div>
+            <div class="game-option" data-game="8">
+            <img src="https://cdn.hamsterkombat.io/mow_trim/image.webp" alt="Mow And Trim">
+            <p>Mow and Trim</p>
+            </div>
             <div class="game-option" data-game="7">
-                <img src="https://cdn.hamsterkombat.io/cafe_dash/image.webp" alt="Cafe Dash">
-                <p>Cafe Dash</p>
+            <img src="https://cdn.hamsterkombat.io/polysphere/image.webp" alt="Polysphere">
+            <p>Polysphere</p>
             </div>
             <div class="game-option" data-game="6">
-                <img src="https://cdn.hamsterkombat.io/mow_trim/image.webp" alt="Mow And Trim">
-                <p>Mow And Trim</p>
-            </div>
-            <div class="game-option" data-game="1">
-                <img src="https://cdn.hamsterkombat.io/chain_cube/image.webp" alt="Chain Cube 2048">
-                <p>Chain Cube 2048</p>
-            </div>
-            <div class="game-option" data-game="5">
-                <img src="https://cdn.hamsterkombat.io/polysphere/image.webp" alt="Polysphere">
-                <p>Polysphere</p>
-            </div>
-            <div class="game-option" data-game="4">
                 <img src="https://cdn.hamsterkombat.io/twerk/image.webp" alt="Twerk Race 3D">
                 <p>Twerk Race 3D</p>
             </div>
-            <div class="game-option" data-game="3">
+            <div class="game-option" data-game="5">
                 <img src="https://cdn.hamsterkombat.io/merge_away/image.webp" alt="Merge Away">
                 <p>Merge Away</p>
             </div>
             <div class="game-option" data-game="2">
+                <img src="https://cdn.hamsterkombat.io/chain_cube/image.webp" alt="Chain Cube 2048">
+                <p>Chain Cube 2048</p>
+            </div>
+            <div class="game-option" data-game="4">
                 <img src="https://cdn.hamsterkombat.io/train_miner/image.webp" alt="Train Miner">
                 <p>Train Miner</p>
-            </div>
-            <div class="game-option" data-game="8">
-                <img src="https://cdn.hamsterkombat.io/zoopolis/image.webp" alt="Zoopolis">
-                <p>Zoopolis</p>
-            </div>
-            <div class="game-option" data-game="9">
-                <img src="https://cdn.hamsterkombat.io/gangs_wars/image.webp" alt="Gangs Wars">
-                <p>Gangs Wars</p>
             </div>
         </div>
 
         <div class="form-group hidden" id="keyCountGroup">
-            <label for="keyRange">Select Number of Keys:</label>
+            <label for="keyCountSelect">Select Number of Keys:</label>
             <div id="keyCountSelect" class="key-slider">
                 <input type="range" min="1" max="4" value="1" id="keyRange">
                 <span id="keyValue">1</span>
             </div>
         </div>
-
-        <div id="startBtnContainer" class="hidden">
-            <button id="startBtn" class="animated-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text">Generate</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
-        </div>
+        <button id="startBtn" class="hidden">Generate Keys</button>
 
         <div id="progressContainer" class="hidden">
             <div class="progress-bar">
@@ -87,47 +69,20 @@
         <div id="keyContainer" class="hidden">
             <h2 id="generatedKeysTitle" class="hidden">Generated Keys</h2>
             <div id="keysList"></div>
-            <button id="copyAllBtn" class="animated-button hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-                <span class="text">Copy all keys</span>
-                <span class="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                </svg>
-            </button>
+            <button id="copyAllBtn" class="hidden">Copy All Keys</button>
         </div>
 
-        <p id="keyCountLabel" class="number hidden">Number of keys:</p>
+        <p id="keyCountLabel">Number of keys:</p>
+
         <button id="generateMoreBtn" class="hidden">Generate More Keys</button>
         <p id="copyStatus" class="hidden">Keys copied to clipboard!</p>
-
+        
         <div class="footer">
-            <div class="footerbtn">
-                <button id="sourceCode" class="animated-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                    <span class="text">Telegram</span>
-                    <span class="circle"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                        <path
-                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                        </path>
-                    </svg>
-                </button>
-            </div>
+            <p>Disclaimer: This tool is for educational purposes only. Use responsibly.</p>
+            <button id="sourceCode">Source code</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
