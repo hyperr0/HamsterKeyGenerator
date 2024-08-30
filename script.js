@@ -1,149 +1,338 @@
 document.addEventListener('DOMContentLoaded', () => {
     const games = {
-        1: { name: 'Chain Cube 2048', appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2', promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3', timing: 30000, attempts: 20 },
-        2: { name: 'Train Miner', appToken: '82647f43-3f87-402d-88dd-09a90025313f', promoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954', timing: 30000, attempts: 15 },
-        3: { name: 'Merge Away', appToken: '8d1cc2ad-e097-4d35-b754-26ed982adbf2', promoId: '9b7a5dbb-90ef-49b7-97df-4d7e64fe4e8f', timing: 30000, attempts: 20 },
-        4: { name: 'Twerk Race 3D', appToken: '21f7c75d-0a08-4de0-a234-356f5f22fabb', promoId: 'b23f96d0-e1d2-42e7-8811-30d1e1abdb1f', timing: 30000, attempts: 15 },
-        5: { name: 'Polysphere', appToken: '1e8b7b73-9e49-4e58-b9a7-cb295ff4304a', promoId: 'a20d4fd4-c8cb-44ad-9bb7-96df2b0aaf08', timing: 30000, attempts: 20 },
-        6: { name: 'Mow And Trim', appToken: '4fd3b1e7-6ac0-4fef-9c4e-2b228029fc1b', promoId: '63dd0bb8-dace-4f5a-a005-99b54c0c4cc0', timing: 30000, attempts: 15 },
-        7: { name: 'Cafe Dash', appToken: '3f8a5b7e-c04d-4d0a-85e6-35b0f39fd4c8', promoId: '8b07d1be-d82a-451b-a279-2dbe84366483', timing: 30000, attempts: 20 },
-        8: { name: 'Zoopolis', appToken: '2f709df4-e3d0-44e6-a7b5-7e021c1fd276', promoId: 'ebfd23b4-7b58-48db-8476-3ae964d94926', timing: 30000, attempts: 15 },
-        9: { name: 'Gangs Wars', appToken: '37c7d442-1cfb-4d9a-8b71-c37e4f2452e5', promoId: 'dfeb4d7f-08c4-4e82-a0a6-6b51151fe468', timing: 30000, attempts: 20 }
+        1: {
+            name: 'Riding Extreme 3D',
+            appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
+            promoId: '43e35910-c168-4634-ad4f-52fd764a843f',
+            timing: 30000, // 30 seconds
+            attempts: 25,
+        },
+        2: {
+            name: 'Chain Cube 2048',
+            appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
+            promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3',
+            timing: 30000, // 30 seconds
+            attempts: 20,
+        },
+        3: {
+            name: 'My Clone Army',
+            appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
+            promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767',
+            timing: 180000, // 180 seconds
+            attempts: 30,
+        },
+        4: {
+            name: 'Train Miner',
+            appToken: '82647f43-3f87-402d-88dd-09a90025313f',
+            promoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954',
+            timing: 30000, // 30 seconds
+            attempts: 15,
+        },
+        5: {
+            name: 'Merge Away',
+            appToken: '8d1cc2ad-e097-4b86-90ef-7a27e19fb833',
+            promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
+            timing: 30000, // 30 seconds
+            attempts: 25,
+        },
+        6: {
+            name: 'Twerk Race 3D',
+            appToken: '61308365-9d16-4040-8bb0-2f4a4c69074c',
+            promoId: '61308365-9d16-4040-8bb0-2f4a4c69074c',
+            timing: 30000, // 30 seconds
+            attempts: 20,
+        },
+        7: {
+            name: 'Polysphere',
+            appToken: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
+            promoId: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        },
+        8: {
+            name: 'Mow and Trim',
+            appToken: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
+            promoId: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        },
+        9: {
+            name: 'Mud Racing',
+            appToken: '8814a785-97fb-4177-9193-ca4180ff9da8',
+            promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        },
+        10: {
+            name: 'Cafe Dash',
+            appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+            promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        },
+        11: {
+            name: 'Zoopolis',
+            appToken: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
+            promoId: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
+            timing: 20000, // 20 seconds
+            attempts: 20,
+        }
     };
 
+    const gameOptions = document.querySelectorAll('.game-option');
+    const keyCountGroup = document.getElementById('keyCountGroup');
     const keyRange = document.getElementById('keyRange');
     const keyValue = document.getElementById('keyValue');
-    const keyCountGroup = document.getElementById('keyCountGroup');
-    const startBtnContainer = document.getElementById('startBtnContainer');
     const startBtn = document.getElementById('startBtn');
+    const keyCountLabel = document.getElementById('keyCountLabel');
     const progressContainer = document.getElementById('progressContainer');
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
     const progressLog = document.getElementById('progressLog');
-    const keysList = document.getElementById('keysList');
     const keyContainer = document.getElementById('keyContainer');
-    const generatedKeysTitle = document.getElementById('generatedKeysTitle');
+    const keysList = document.getElementById('keysList');
     const copyAllBtn = document.getElementById('copyAllBtn');
+    const generatedKeysTitle = document.getElementById('generatedKeysTitle');
+    const copyStatus = document.getElementById('copyStatus');
     const generateMoreBtn = document.getElementById('generateMoreBtn');
-    const gameSelectContainer = document.getElementById('gameSelectContainer');
+    const sourceCode = document.getElementById('sourceCode');
 
     let selectedGame = null;
 
-    gameSelectContainer.addEventListener('click', (e) => {
-        const gameElement = e.target.closest('.game-option');
-        if (gameElement) {
-            selectedGame = games[gameElement.getAttribute('data-game')];
+    sourceCode.addEventListener('click', () => {
+        window.open('https://github.com/ShafiqSadat/HamsterKeyGenWeb', '_blank');
+    });
+    
+    gameOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            gameOptions.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            selectedGame = option.dataset.game;
+
             keyCountGroup.classList.remove('hidden');
-            startBtnContainer.classList.remove('hidden');
-        }
+            startBtn.classList.remove('hidden');
+        });
     });
 
     keyRange.addEventListener('input', () => {
-        keyValue.textContent = keyRange.value;
+        keyValue.innerText = keyRange.value;
     });
 
     startBtn.addEventListener('click', async () => {
-        const keyCount = parseInt(keyRange.value, 10);
-        startBtnContainer.classList.add('hidden');
-        keyCountGroup.classList.add('hidden');
+        const keyCount = parseInt(keyRange.value);
+        if (!selectedGame) {
+            alert('Please select a game first.');
+            return;
+        }
+
+        const gameChoice = parseInt(selectedGame);
+        const game = games[gameChoice];
+
+        // Hide the form sections
+        document.querySelector('.grid-container').style.display = 'none';
+        keyCountGroup.style.display = 'none';
+
+        keyCountLabel.innerText = `Number of keys: ${keyCount}`;
+
+        progressBar.style.width = '0%';
+        progressText.innerText = '0%';
+        progressLog.innerText = 'Starting...';
         progressContainer.classList.remove('hidden');
+        keyContainer.classList.add('hidden');
+        generatedKeysTitle.classList.add('hidden');
+        keysList.innerHTML = '';
+        copyAllBtn.classList.add('hidden');
+        startBtn.classList.add('hidden');
+        startBtn.disabled = true;
+
+        let progress = 0;
+        const updateProgress = (increment, message) => {
+            progress += increment;
+            progressBar.style.width = `${progress}%`;
+            progressText.innerText = `${progress}%`;
+            progressLog.innerText = message;
+        };
+
+        const generateKeyProcess = async () => {
+            const clientId = generateClientId();
+            let clientToken;
+            try {
+                clientToken = await login(clientId, game.appToken);
+            } catch (error) {
+                alert(`Failed to login: ${error.message}`);
+                startBtn.disabled = false;
+                return null;
+            }
+
+            for (let i = 0; i < game.attempts; i++) {
+                const hasCode = await emulateProgress(clientToken, game.promoId);
+                updateProgress((100 / game.attempts) / keyCount, `Emulating progress ${i + 1}/${game.attempts}...`);
+                if (hasCode) {
+                    break;
+                }
+                await sleep(game.timing);  // Sleep after each attempt to wait before the next event registration
+            }
+
+            try {
+                const key = await generateKey(clientToken, game.promoId);
+                updateProgress(100 / keyCount, 'Generating key...');
+                return key;
+            } catch (error) {
+                alert(`Failed to generate key: ${error.message}`);
+                return null;
+            }
+        };
+
+        const keys = await Promise.all(Array.from({ length: keyCount }, generateKeyProcess));
+
+        if (keys.length > 1) {
+            keysList.innerHTML = keys.filter(key => key).map(key =>
+                `<div class="key-item">
+                    <input type="text" value="${key}" readonly>
+                    <button class="copyKeyBtn" data-key="${key}">Copy Key</button>
+                </div>`
+            ).join('');
+            copyAllBtn.classList.remove('hidden');
+        } else if (keys.length === 1) {
+            keysList.innerHTML =
+                `<div class="key-item">
+                    <input type="text" value="${keys[0]}" readonly>
+                    <button class="copyKeyBtn" data-key="${keys[0]}">Copy Key</button>
+                </div>`;
+        }
+
         keyContainer.classList.remove('hidden');
         generatedKeysTitle.classList.remove('hidden');
 
-        keysList.innerHTML = '';
+        document.querySelectorAll('.copyKeyBtn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const key = event.target.getAttribute('data-key');
+                copyToClipboard(key);
+            });
+        });
 
-        for (let i = 0; i < keyCount; i++) {
-            await generateKey(i + 1, selectedGame);
-        }
+        copyAllBtn.addEventListener('click', () => {
+            const keysText = keys.filter(key => key).join('\n');
+            copyToClipboard(keysText);
+        });
 
-        copyAllBtn.classList.remove('hidden');
+        progressBar.style.width = '100%';
+        progressText.innerText = '100%';
+        progressLog.innerText = 'Complete';
+
+        startBtn.classList.remove('hidden');
+        keyCountGroup.classList.remove('hidden');
+        document.querySelector('.grid-container').style.display = 'grid';
+        startBtn.disabled = false;
     });
 
-    async function generateKey(index, game) {
-        updateProgress(index, game);
-        await sleep(game.timing);
+    const generateClientId = () => {
+        const timestamp = Date.now();
+        const randomNumbers = Array.from({ length: 19 }, () => Math.floor(Math.random() * 10)).join('');
+        return `${timestamp}-${randomNumbers}`;
+    };
 
-        try {
-            const promoKey = await requestPromoKey(game);
-            displayKey(promoKey, index);
-        } catch (error) {
-            console.error('Key generation failed:', error);
-            displayKey('Failed to generate key', index);
+    const login = async (clientId, appToken) => {
+        const response = await fetch('https://api.gamepromo.io/promo/login-client', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                appToken,
+                clientId,
+                clientOrigin: 'deviceid'
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to login');
         }
 
-        updateProgress(index + 1, game);
-    }
+        const data = await response.json();
+        return data.clientToken;
+    };
 
-    function displayKey(key, index) {
-        const keyItem = document.createElement('div');
-        keyItem.classList.add('key-item');
-        keyItem.innerHTML = `
-            <span>${index}. ${key}</span>
-            <button class="copy-btn" data-key="${key}">Copy</button>
-        `;
-        keysList.appendChild(keyItem);
-    }
-
-    function updateProgress(index, game) {
-        const progressPercentage = (index / keyRange.value) * 100;
-        progressBar.style.width = `${progressPercentage}%`;
-        progressText.textContent = `${progressPercentage.toFixed(0)}%`;
-        progressLog.textContent = `Generating key ${index} for ${game.name}...`;
-    }
-
-    async function requestPromoKey(game) {
-        const loginData = {
-            deviceId: uuidv4(),
-            appToken: game.appToken
-        };
-
-        const loginResponse = await fetch('https://auth.hamster.io/v1/login', {
+    const emulateProgress = async (clientToken, promoId) => {
+        const response = await fetch('https://api.gamepromo.io/promo/register-event', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(loginData)
+            headers: {
+                'Authorization': `Bearer ${clientToken}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                promoId,
+                eventId: generateUUID(),
+                eventOrigin: 'undefined'
+            })
         });
 
-        const loginResult = await loginResponse.json();
-        const token = loginResult.token;
+        if (!response.ok) {
+            return false;
+        }
 
-        const promoResponse = await fetch(`https://promo.hamster.io/v1/promo/${game.promoId}/redeem`, {
+        const data = await response.json();
+        return data.hasCode;
+    };
+
+    const generateKey = async (clientToken, promoId) => {
+        const response = await fetch('https://api.gamepromo.io/promo/create-code', {
             method: 'POST',
-            headers: { 'Authorization': `Bearer ${token}` }
+            headers: {
+                'Authorization': `Bearer ${clientToken}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                promoId
+            })
         });
 
-        const promoResult = await promoResponse.json();
-        return promoResult.code;
-    }
+        if (!response.ok) {
+            throw new Error('Failed to generate key');
+        }
 
-    function uuidv4() {
+        const data = await response.json();
+        return data.promoCode;
+    };
+
+    const generateUUID = () => {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            const r = Math.random() * 16 | 0,
-                v = c === 'x' ? r : (r & 0x3 | 0x8);
+            const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
-    }
+    };
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-    copyAllBtn.addEventListener('click', () => {
-        const allKeys = Array.from(document.querySelectorAll('.key-item span')).map(el => el.textContent).join('\n');
-        copyToClipboard(allKeys);
-    });
+    const copyToClipboard = (text) => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                copyStatus.classList.remove('hidden');
+                setTimeout(() => copyStatus.classList.add('hidden'), 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.top = '0';
+            textArea.style.left = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
 
-    keysList.addEventListener('click', (e) => {
-        if (e.target.classList.contains('copy-btn')) {
-            const key = e.target.getAttribute('data-key');
-            copyToClipboard(key);
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    copyStatus.classList.remove('hidden');
+                    setTimeout(() => copyStatus.classList.add('hidden'), 2000);
+                }
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+
+            document.body.removeChild(textArea);
         }
-    });
-
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => {
-            alert('Keys copied to clipboard!');
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
+    };
 });
