@@ -4,65 +4,65 @@ document.addEventListener('DOMContentLoaded', () => {
         name: 'Chain Cube 2048',
         appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
         promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3',
-        interval: 20,
-        eventCount: 3,
+        timing: 30000, // 30 seconds
+        attempts: 20,
     },
     2: {
         name: 'Train Miner',
         appToken: '82647f43-3f87-402d-88dd-09a90025313f',
         promoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954',
-        interval: 120,
-        eventCount: 1,
+        timing: 30000, // 30 seconds
+        attempts: 15,
     },
     3: {
         name: 'Merge Away',
         appToken: '8d1cc2ad-e097-4b86-90ef-7a27e19fb833',
         promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
-        interval: 21,
-        eventCount: 7,
+        timing: 30000, // 30 seconds
+        attempts: 25,
     },
-    4 : {
-        name: 'TwerkRace',
+    4: {
+        name: 'Twerk Race 3D',
         appToken: '61308365-9d16-4040-8bb0-2f4a4c69074c',
         promoId: '61308365-9d16-4040-8bb0-2f4a4c69074c',
-        interval: 20,
-        eventCount: 10,
+        timing: 30000, // 30 seconds
+        attempts: 20,
     },
     5: {
         name: 'Polysphere',
         appToken: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
         promoId: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
-        interval: 20,
-        eventCount: 16,
+        timing: 20000, // 20 seconds
+        attempts: 20,
     },
     6: {
         name: 'Mow and Trim',
         appToken: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
         promoId: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
-        interval: 20,
-        eventCount: 10,
+        timing: 20000,
+        attempts: 20,
     },
     7: {
         name: 'Cafe Dash',
-        appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
-        promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
-        interval: 20,
-        eventCount: 16,
+        appToken: 'c0971b8-04df-4e72-8a3e-ec4dc663cd11',
+        promoId: 'c0971b8-04df-4e72-8a3e-ec4dc663cd11',
+        timing: 20000,
+        attempts: 20,
     },
     8: {
-        name: 'Gangs Wars',
-        appToken: 'b6de60a0-e030-48bb-a551-548372493523',
-        promoId: 'b6de60a0-e030-48bb-a551-548372493523',
-        interval: 20,
-        eventCount: 16,
-    },
-    9: {
         name: 'Zoopolis',
         appToken: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
         promoId: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
-        interval: 20,
-        eventCount: 7,
-    }
+        timing: 20000,
+        attempts: 20,
+    },
+    9: {
+        name: 'Gangs Wars',
+        appToken: 'c7821fa7-6632-482c-9635-2bd5798585f9',
+        promoId: 'c7821fa7-6632-482c-9635-2bd5798585f9',
+        timing: 20000,
+        attempts: 20,
+    },
 };
 
     const gameOptions = document.querySelectorAll('.game-option');
@@ -85,10 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let selectedGame = null;
 
-    sourceCode.addEventListener('click', () => {
-        window.open('https://github.com/ShafiqSadat/HamsterKeyGenWeb', '_blank');
-    });
-    
     gameOptions.forEach(option => {
         option.addEventListener('click', () => {
             gameOptions.forEach(opt => opt.classList.remove('selected'));
@@ -118,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.grid-container').style.display = 'none';
         keyCountGroup.style.display = 'none';
 
-        keyCountLabel.innerText = `Number of keys: ${keyCount}`;
+        keyCountLabel.innerText = Number of keys: ${keyCount};
 
         progressBar.style.width = '0%';
         progressText.innerText = '0%';
@@ -134,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let progress = 0;
         const updateProgress = (increment, message) => {
             progress += increment;
-            progressBar.style.width = `${progress}%`;
-            progressText.innerText = `${progress}%`;
+            progressBar.style.width = ${progress}%;
+            progressText.innerText = ${progress}%;
             progressLog.innerText = message;
         };
 
@@ -145,14 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 clientToken = await login(clientId, game.appToken);
             } catch (error) {
-                alert(`Failed to login: ${error.message}`);
+                alert(Failed to login: ${error.message});
                 startBtn.disabled = false;
                 return null;
             }
 
             for (let i = 0; i < game.attempts; i++) {
                 const hasCode = await emulateProgress(clientToken, game.promoId);
-                updateProgress((100 / game.attempts) / keyCount, `Emulating progress ${i + 1}/${game.attempts}...`);
+                updateProgress((100 / game.attempts) / keyCount, Emulating progress ${i + 1}/${game.attempts}...);
                 if (hasCode) {
                     break;
                 }
@@ -164,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateProgress(100 / keyCount, 'Generating key...');
                 return key;
             } catch (error) {
-                alert(`Failed to generate key: ${error.message}`);
+                alert(Failed to generate key: ${error.message});
                 return null;
             }
         };
@@ -173,18 +169,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (keys.length > 1) {
             keysList.innerHTML = keys.filter(key => key).map(key =>
-                `<div class="key-item">
+                <div class="key-item">
                     <input type="text" value="${key}" readonly>
                     <button class="copyKeyBtn" data-key="${key}">Copy Key</button>
-                </div>`
+                </div>
             ).join('');
             copyAllBtn.classList.remove('hidden');
         } else if (keys.length === 1) {
             keysList.innerHTML =
-                `<div class="key-item">
+                <div class="key-item">
                     <input type="text" value="${keys[0]}" readonly>
                     <button class="copyKeyBtn" data-key="${keys[0]}">Copy Key</button>
-                </div>`;
+                </div>;
         }
 
         keyContainer.classList.remove('hidden');
@@ -212,10 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
         startBtn.disabled = false;
     });
 
+    sourceCode.addEventListener('click', () => {
+        window.open('https://t.me/hamsterplaygroundgamecodes', '_blank');
+    });
+
     const generateClientId = () => {
         const timestamp = Date.now();
         const randomNumbers = Array.from({ length: 19 }, () => Math.floor(Math.random() * 10)).join('');
-        return `${timestamp}-${randomNumbers}`;
+        return ${timestamp}-${randomNumbers};
     };
 
     const login = async (clientId, appToken) => {
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('https://api.gamepromo.io/promo/register-event', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${clientToken}`,
+                'Authorization': Bearer ${clientToken},
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('https://api.gamepromo.io/promo/create-code', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${clientToken}`,
+                'Authorization': Bearer ${clientToken},
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
